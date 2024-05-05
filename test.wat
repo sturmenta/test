@@ -4,10 +4,10 @@
 
   ;; Then we declare that we want to import a function named "env" "say_hello" with
   ;; that type signature.
-  (import "env" "say_helllo" (func $say_helllo (type $no_args_no_rets_t)))
+  (import "env" "say_hello" (func $say_hello (type $no_args_no_rets_t)))
 
   ;; Finally we create an entrypoint that calls our imported function.
   (func $run (type $no_args_no_rets_t)
-    (call $say_helllo))
+    (call $say_hello))
   ;; And mark it as an exported function named "run".
   (export "run" (func $run)))
